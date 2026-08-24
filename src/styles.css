@@ -198,3 +198,51 @@
     transition-duration: 0.001ms !important;
   }
 }
+
+/* ---------- Scroll-in reveal (smooth, CSS transition driven) ---------- */
+
+@utility inview {
+  opacity: 0;
+  transform: translateY(26px);
+  transition:
+    opacity 1s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+@utility inview-on {
+  opacity: 1;
+  transform: none;
+}
+
+/* ---------- Premium surface treatments ---------- */
+
+@utility card-soft {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  box-shadow: 0 1px 2px -1px color-mix(in oklab, var(--navy) 8%, transparent);
+  transition:
+    box-shadow 0.55s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.55s ease,
+    transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+  &:hover {
+    border-color: color-mix(in oklab, var(--accent) 45%, transparent);
+    box-shadow: 0 30px 70px -40px color-mix(in oklab, var(--navy) 42%, transparent);
+    transform: translateY(-3px);
+  }
+}
+
+@utility hairline-top {
+  background-image: linear-gradient(
+    to right,
+    transparent,
+    color-mix(in oklab, var(--steel) 30%, transparent),
+    transparent
+  );
+  height: 1px;
+}
+
+@utility glow-accent {
+  box-shadow: 0 0 0 1px color-mix(in oklab, var(--accent) 30%, transparent),
+    0 24px 60px -40px color-mix(in oklab, var(--accent) 55%, transparent);
+}
