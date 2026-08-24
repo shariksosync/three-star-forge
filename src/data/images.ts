@@ -41,6 +41,12 @@ import indLineAutomation from "@/assets/ind-line-automation.jpg";
 import ctaWorkshop from "@/assets/cta-workshop.jpg";
 import capabilitiesMetrology from "@/assets/capabilities-metrology.jpg";
 import npiBlueprints from "@/assets/npi-blueprints.jpg";
+import pageAbout from "@/assets/page-about-workshop.jpg";
+import pageServices from "@/assets/page-services-design.jpg";
+import pageCapabilities from "@/assets/page-capabilities-induction.jpg";
+import pageProjects from "@/assets/page-projects-line.jpg";
+import pageContact from "@/assets/page-contact-facility.jpg";
+import galleryInspection from "@/assets/gallery-inspection-bench.jpg";
 
 export const IMAGES = {
   // Site-level
@@ -49,6 +55,13 @@ export const IMAGES = {
   cta: ctaWorkshop,
   metrology: capabilitiesMetrology,
   blueprints: npiBlueprints,
+
+  // Page heroes (each used once)
+  pageAbout,
+  pageServices,
+  pageCapabilities,
+  pageProjects,
+  pageContact,
 
   // Industries
   materialHandling: indMaterialHandling,
@@ -91,6 +104,7 @@ export const IMAGES = {
   galleryCrankMechanism: p5_3.url,
   galleryOperatorPanel: p12_2.url,
   galleryMaintenance: p13_2.url,
+  galleryInspection,
 } as const;
 
 export type ImageKey = keyof typeof IMAGES;

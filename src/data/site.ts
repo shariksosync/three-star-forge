@@ -853,7 +853,7 @@ export const GALLERY: GalleryItem[] = [
     id: "g-8",
     title: "Metrology & Dimensional Verification",
     category: "Engineering",
-    image: IMAGES.metrology,
+    image: IMAGES.galleryInspection,
     featured: true,
   },
   {
