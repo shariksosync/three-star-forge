@@ -105,7 +105,11 @@ export function Footer() {
               <p className="font-medium text-onnavy">{company.contactPerson}</p>
               <p>{company.address}</p>
               <p>
-                <a href={`tel:${company.phone.split("/")[0].replace(/\s/g, "")}`} className="hover:text-accent">
+                <a
+                  href={`tel:${(company.phone.split("/")[0] ?? "").replace(/\s/g, "")}`}
+                  className="hover:text-accent"
+                >
+
                   {company.phone}
                 </a>
               </p>
